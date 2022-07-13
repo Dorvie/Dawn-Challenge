@@ -1,0 +1,55 @@
+
+.swatch {
+  position:relative;
+  margin: 0 7px;
+  width:45%;
+}
+.swatch-details:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.swatch-details {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid rgb(var(--color-foreground));
+  min-height: 224px;
+  box-shadow: 0 7px 30px -10px #96aab480;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+}
+
+.swatch-short {
+  min-height: 180px !important;
+}
+
+.swatch-2x {
+  max-width: 370px;
+}
+
+.swatch-3x {
+  max-width: 185px;
+}
+
+.swatch-input {
+  opacity: 0;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.swatch-img {
+  height: 90px;
+  width: 90px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.3;
+  background-size: contain !important;
+}
+
+.swatch-input:checked ~ .swatch-details > .swatch-scenario {
+  opacity: 1;
+}

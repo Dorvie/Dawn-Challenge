@@ -53,3 +53,51 @@
 .swatch-input:checked ~ .swatch-details > .swatch-scenario {
   opacity: 1;
 }
+
+@media screen and (min-width: 750px) {
+  .card {
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 60px auto;
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  }
+}
+
+.product-form__swatch input[type="radio"] + label {
+  border: var(--variant-pills-border-width) solid
+    rgba(var(--color-foreground), var(--variant-pills-border-opacity));
+  background-color: rgb(var(--color-background));
+  color: rgba(var(--color-foreground));
+  color: rgb(var(--color-foreground));
+  display: inline-block;
+  margin: 0.7rem 0.5rem 0.2rem 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  line-height: 1;
+  text-align: center;
+  transition: border var(--duration-short) ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.swatch-input:checked ~ .swatch-details {
+  outline: 2px solid rgb(var(--color-foreground));
+  background-color: rgba(var(--color-foreground), 0.1) !important;
+}
+
+.growIn {
+  animation: growIn 0.2s;
+  width: 95%;
+}
+
+@keyframes growIn {
+  from {
+    transform: scaleX(0.5);
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+}
